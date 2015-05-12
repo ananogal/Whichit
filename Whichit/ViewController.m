@@ -38,20 +38,15 @@
     images = [NSMutableArray array];
 }
 
-
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
-{
-    searchBar.enablesReturnKeyAutomatically = YES;
-}
-
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
     [self.searchBar resignFirstResponder];
     [images addObject:searchBar.text];
     [tableViewController setImages:images];
+    self.searchBar.text =@"";
 }
 
-- (void)searchBarSearchButtonClicked
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self.searchBar resignFirstResponder];
 }
@@ -59,6 +54,11 @@
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     //images = [repository getAllByTag:searchText];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
