@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0426CE4D1B03491000B465B3 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426CE4C1B03491000B465B3 /* ContainerViewController.m */; };
+		0426CE501B034C0600B465B3 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426CE4F1B034C0600B465B3 /* Empty.m */; };
 		930354A51B00BE40001B7EA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 930354A41B00BE40001B7EA2 /* main.m */; };
 		930354A81B00BE40001B7EA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 930354A71B00BE40001B7EA2 /* AppDelegate.m */; };
 		930354AB1B00BE40001B7EA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930354AA1B00BE40001B7EA2 /* ViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0426CE4B1B03491000B465B3 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		0426CE4C1B03491000B465B3 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		0426CE4E1B034C0600B465B3 /* Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Empty.h; sourceTree = "<group>"; };
+		0426CE4F1B034C0600B465B3 /* Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
 		9303549F1B00BE40001B7EA2 /* Whichit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whichit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		930354A31B00BE40001B7EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		930354A41B00BE40001B7EA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0426CE4A1B0348BC00B465B3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				930354A91B00BE40001B7EA2 /* ViewController.h */,
+				930354AA1B00BE40001B7EA2 /* ViewController.m */,
+				930354C81B00C5E6001B7EA2 /* ImagesTableViewController.h */,
+				930354C91B00C5E6001B7EA2 /* ImagesTableViewController.m */,
+				930354CB1B00C600001B7EA2 /* ImagesCollectionViewController.h */,
+				930354CC1B00C600001B7EA2 /* ImagesCollectionViewController.m */,
+				0426CE4B1B03491000B465B3 /* ContainerViewController.h */,
+				0426CE4C1B03491000B465B3 /* ContainerViewController.m */,
+				0426CE4E1B034C0600B465B3 /* Empty.h */,
+				0426CE4F1B034C0600B465B3 /* Empty.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		930354961B00BE40001B7EA2 = {
 			isa = PBXGroup;
 			children = (
@@ -108,20 +131,15 @@
 		930354A11B00BE40001B7EA2 /* Whichit */ = {
 			isa = PBXGroup;
 			children = (
+				0426CE4A1B0348BC00B465B3 /* Controllers */,
 				930354D51B00CA0C001B7EA2 /* Domain */,
 				930354CE1B00C730001B7EA2 /* services */,
 				930354A61B00BE40001B7EA2 /* AppDelegate.h */,
 				930354A71B00BE40001B7EA2 /* AppDelegate.m */,
-				930354A91B00BE40001B7EA2 /* ViewController.h */,
-				930354AA1B00BE40001B7EA2 /* ViewController.m */,
 				930354AC1B00BE40001B7EA2 /* Main.storyboard */,
 				930354AF1B00BE40001B7EA2 /* Images.xcassets */,
 				930354B11B00BE40001B7EA2 /* LaunchScreen.xib */,
 				930354A21B00BE40001B7EA2 /* Supporting Files */,
-				930354C81B00C5E6001B7EA2 /* ImagesTableViewController.h */,
-				930354C91B00C5E6001B7EA2 /* ImagesTableViewController.m */,
-				930354CB1B00C600001B7EA2 /* ImagesCollectionViewController.h */,
-				930354CC1B00C600001B7EA2 /* ImagesCollectionViewController.m */,
 			);
 			path = Whichit;
 			sourceTree = "<group>";
@@ -286,10 +304,12 @@
 				930354E41B00CEBD001B7EA2 /* Comment.m in Sources */,
 				930354EA1B011670001B7EA2 /* ImageRepository.m in Sources */,
 				930354DB1B00CA84001B7EA2 /* DataFactory.m in Sources */,
+				0426CE501B034C0600B465B3 /* Empty.m in Sources */,
 				930354D41B00C7A4001B7EA2 /* JSONReader.m in Sources */,
 				930354A51B00BE40001B7EA2 /* main.m in Sources */,
 				930354D81B00CA1F001B7EA2 /* Image.m in Sources */,
 				930354E71B00D3BD001B7EA2 /* User.m in Sources */,
+				0426CE4D1B03491000B465B3 /* ContainerViewController.m in Sources */,
 				930354CD1B00C600001B7EA2 /* ImagesCollectionViewController.m in Sources */,
 				930354E11B00CEAE001B7EA2 /* Caption.m in Sources */,
 				930354CA1B00C5E6001B7EA2 /* ImagesTableViewController.m in Sources */,

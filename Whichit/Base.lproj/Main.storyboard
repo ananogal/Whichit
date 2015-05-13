@@ -32,35 +32,25 @@
                                     <tabBarItem systemItem="more" id="Ug5-vr-7J4"/>
                                 </items>
                             </tabBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRP-a8-Wcq" userLabel="cv_collectionView">
-                                <rect key="frame" x="0.0" y="93" width="600" height="499"/>
-                                <connections>
-                                    <segue destination="5k2-eR-47l" kind="embed" id="6Bl-YF-elZ"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMO-5s-ctr" userLabel="cv_tableView">
                                 <rect key="frame" x="0.0" y="93" width="600" height="507"/>
                                 <connections>
-                                    <segue destination="hwR-Sr-dmd" kind="embed" identifier="segueToTableView" id="q9N-zW-vvT"/>
+                                    <segue destination="ht7-RE-1sM" kind="embed" id="lNE-AB-eJu"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="mRP-a8-Wcq" secondAttribute="trailing" id="3nI-7b-9DY"/>
                             <constraint firstItem="qMO-5s-ctr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7GJ-Jo-mHW"/>
                             <constraint firstItem="UoN-jn-Bx4" firstAttribute="top" secondItem="kaQ-mU-mqZ" secondAttribute="bottom" id="IhH-bl-I84"/>
                             <constraint firstItem="UoN-jn-Bx4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MXX-UE-ukk"/>
-                            <constraint firstItem="mRP-a8-Wcq" firstAttribute="top" secondItem="UoN-jn-Bx4" secondAttribute="bottom" id="Mfk-HY-74o"/>
                             <constraint firstItem="UoN-jn-Bx4" firstAttribute="top" secondItem="kaQ-mU-mqZ" secondAttribute="bottom" id="QmF-FD-7lg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qMO-5s-ctr" secondAttribute="bottom" id="RI4-AX-2TG"/>
                             <constraint firstItem="kaQ-mU-mqZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UTW-7a-UBc"/>
-                            <constraint firstItem="mRP-a8-Wcq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dsi-eb-sAH"/>
                             <constraint firstItem="qMO-5s-ctr" firstAttribute="top" secondItem="UoN-jn-Bx4" secondAttribute="bottom" id="lJT-Aj-Qw3"/>
                             <constraint firstItem="kaQ-mU-mqZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sSS-xS-9Mi"/>
                             <constraint firstAttribute="trailing" secondItem="kaQ-mU-mqZ" secondAttribute="trailing" id="skj-2h-1pb"/>
                             <constraint firstAttribute="trailing" secondItem="UoN-jn-Bx4" secondAttribute="trailing" id="v7J-su-jWG"/>
-                            <constraint firstAttribute="bottom" secondItem="mRP-a8-Wcq" secondAttribute="bottom" constant="8" id="wWp-iq-Pp4"/>
                             <constraint firstItem="qMO-5s-ctr" firstAttribute="top" secondItem="UoN-jn-Bx4" secondAttribute="bottom" id="wtx-wY-GsJ"/>
                             <constraint firstAttribute="trailing" secondItem="qMO-5s-ctr" secondAttribute="trailing" id="xjY-vK-wVi"/>
                         </constraints>
@@ -70,7 +60,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionItem" destination="Br2-0G-vX8" id="d0D-6W-eOA"/>
-                        <outlet property="cv_collectionView" destination="mRP-a8-Wcq" id="yaD-aO-3pW"/>
                         <outlet property="cv_tableView" destination="qMO-5s-ctr" id="R5t-MF-UeC"/>
                         <outlet property="searchBar" destination="kaQ-mU-mqZ" id="ibs-b0-nAK"/>
                         <outlet property="tabBar" destination="UoN-jn-Bx4" id="77h-ZQ-n5B"/>
@@ -82,6 +71,28 @@
             <point key="canvasLocation" x="275" y="-587"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="KiW-yL-efp">
+            <objects>
+                <viewController id="ht7-RE-1sM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WqV-GF-cEk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hba-8Q-0Qk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h81-zS-u8a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="507"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="5k2-eR-47l" kind="custom" identifier="segueForCollectionView" customClass="Empty" id="UT1-Lg-9JD"/>
+                        <segue destination="hwR-Sr-dmd" kind="custom" identifier="segueForTableView" customClass="Empty" id="ABg-7S-Ss2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T77-Go-JtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966" y="-534.5"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="3Yf-ud-9l7">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="5k2-eR-47l" sceneMemberID="viewController">
@@ -90,10 +101,10 @@
                         <viewControllerLayoutGuide type="bottom" id="xM4-2f-Kbp"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Zt2-Ie-gxs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="507"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x0Y-Io-Ami">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x0Y-Io-Ami">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="499"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Woz-d8-qsF">
                                     <size key="itemSize" width="50" height="50"/>
@@ -123,10 +134,12 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="507"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wb9-yS-m2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="-76.5"/>
+            <point key="canvasLocation" x="966" y="116.5"/>
         </scene>
         <!--Images Table View Controller-->
         <scene sceneID="lP2-Hj-aIC">
@@ -157,10 +170,12 @@
                             <outlet property="delegate" destination="hwR-Sr-dmd" id="8Hi-Sl-szp"/>
                         </connections>
                     </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="507"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKS-aa-qVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367" y="120.5"/>
+            <point key="canvasLocation" x="1657" y="-534.5"/>
         </scene>
     </scenes>
 </document>
