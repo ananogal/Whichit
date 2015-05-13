@@ -2,18 +2,16 @@
 #import "ViewController.h"
 #import "JSONReader.h"
 #import "ImageRepository.h"
-#import "ImagesTableViewController.h"
-#import "ImagesCollectionViewController.h"
+#import "ContainerViewController.h"
 
 @interface ViewController ()
-
+    @property (nonatomic, strong) ContainerViewController *containerViewController;
 @end
 
 @implementation ViewController
 {
     JSONReader* reader;
     ImageRepository* repository;
-    ImagesTableViewController* tableViewController;
     NSMutableArray* images;
 }
 
@@ -29,8 +27,6 @@
 - (void)setup
 {
     [self.tabBar setSelectedItem:self.tableItem];
-    self.cv_tableView.hidden = NO;
-    self.cv_collectionView.hidden = YES;
     
     reader = [[JSONReader alloc] init];
     repository = [[ImageRepository alloc] initWithReader:reader];
@@ -42,7 +38,7 @@
 {
     [self.searchBar resignFirstResponder];
     [images addObject:searchBar.text];
-    [tableViewController setImages:images];
+    [self.containerViewController setImages:images];
     self.searchBar.text =@"";
 }
 
@@ -63,8 +59,8 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"segueToTableView"]) {
-        tableViewController = (ImagesTableViewController*)segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"segueToContainerView"]) {
+        self.containerViewController = (ContainerViewController*)segue.destinationViewController;
     }
 }
 

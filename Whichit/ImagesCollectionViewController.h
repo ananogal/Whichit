@@ -10,4 +10,6 @@
 
 @interface ImagesCollectionViewController : UICollectionViewController
 
+@property (nonatomic, strong)NSArray* images;
+
 @end

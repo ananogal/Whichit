@@ -32,10 +32,10 @@
                                     <tabBarItem systemItem="more" id="Ug5-vr-7J4"/>
                                 </items>
                             </tabBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMO-5s-ctr" userLabel="cv_tableView">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMO-5s-ctr" userLabel="containerView">
                                 <rect key="frame" x="0.0" y="93" width="600" height="507"/>
                                 <connections>
-                                    <segue destination="ht7-RE-1sM" kind="embed" id="lNE-AB-eJu"/>
+                                    <segue destination="ht7-RE-1sM" kind="embed" identifier="segueToContainerView" id="lNE-AB-eJu"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -60,7 +60,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionItem" destination="Br2-0G-vX8" id="d0D-6W-eOA"/>
-                        <outlet property="cv_tableView" destination="qMO-5s-ctr" id="R5t-MF-UeC"/>
                         <outlet property="searchBar" destination="kaQ-mU-mqZ" id="ibs-b0-nAK"/>
                         <outlet property="tabBar" destination="UoN-jn-Bx4" id="77h-ZQ-n5B"/>
                         <outlet property="tableItem" destination="Ug5-vr-7J4" id="O2v-31-B6w"/>
@@ -70,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="275" y="-587"/>
         </scene>
-        <!--View Controller-->
+        <!--Container View Controller-->
         <scene sceneID="KiW-yL-efp">
             <objects>
-                <viewController id="ht7-RE-1sM" sceneMemberID="viewController">
+                <viewController id="ht7-RE-1sM" customClass="ContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WqV-GF-cEk"/>
                         <viewControllerLayoutGuide type="bottom" id="Hba-8Q-0Qk"/>
@@ -92,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="966" y="-534.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Images Collection View Controller-->
         <scene sceneID="3Yf-ud-9l7">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5k2-eR-47l" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5k2-eR-47l" customClass="ImagesCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uNn-LA-uaH"/>
                         <viewControllerLayoutGuide type="bottom" id="xM4-2f-Kbp"/>

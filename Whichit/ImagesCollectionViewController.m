@@ -13,7 +13,9 @@
 @end
 
 @implementation ImagesCollectionViewController
-
+{
+    NSArray* _images;
+}
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
@@ -25,12 +27,26 @@ static NSString * const reuseIdentifier = @"Cell";
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    // Do any additional setup after loading the view.
+    self.images = [NSArray array];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setImages:(NSArray *)images
+{
+    _images = images;
+    if(self.collectionView)
+    {
+        [self.collectionView reloadData];
+    }
+}
+
+- (NSArray*)images
+{
+    return _images;
 }
 
 /*

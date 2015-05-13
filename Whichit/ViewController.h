@@ -8,8 +8,6 @@
 
 @property (weak, nonatomic) IBOutlet UITabBar *tabBar;
 
-@property (weak, nonatomic) IBOutlet UIView *cv_collectionView;
-@property (weak, nonatomic) IBOutlet UIView *cv_tableView;
 @property (weak, nonatomic) IBOutlet UITabBarItem *collectionItem;
 @property (weak, nonatomic) IBOutlet UITabBarItem *tableItem;
 
